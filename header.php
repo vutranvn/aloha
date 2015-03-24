@@ -12,6 +12,7 @@
     <body <?php body_class( ); ?>>
         <div class="container">
             <div class="header row" id="header" role="banner">
+                <div class="beta_logo"><img src="<?php echo get_template_directory_uri() . '/images/beta_corner.png'; ?>" alt="<?php bloginfo('name'); ?>"></div>
                 <header>
                     <div class="site-branding">
                         <h1 id="site-title">
