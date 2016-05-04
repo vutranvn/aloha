@@ -1,0 +1,24 @@
+# Copyright (C) 2016 Vu Tran - http://vutran.vn
+msgid ""
+msgstr ""
+"Project-Id-Version: Aloha 1.0.0\n"
+"POT-Creation-Date: 2016-05-01 13:30+0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-05-01 13:31+0700\n"
+"Language-Team: phongvu.811@gmail.com\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: vi_VN\n"
+
+#: setup.php:37
+msgid "Menu"
+msgstr "Trình đơn"
+
+msgid "Primary Menu"
+msgstr "Trình đơn chính"
+
+msgid "Contact Me"
+msgstr "Liên hệ"

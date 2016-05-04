@@ -70,24 +70,13 @@ if ( ! function_exists( 'theme_setup' ) ) :
 		// Declare support for title theme feature
 		add_theme_support( 'title-tag' );
 
-		add_action( 'get_header', 'theme_head_styles' );
-		add_action( 'get_footer', 'theme_head_scripts' );
+		// Remove wp_generator
+		//remove_action('wp_head', 'wp_generator');
+
 	}
 endif; // theme_setup
 
-function theme_head_styles()
-{
-	global $theme_version;
-
-	wp_enqueue_style( 'aloha-style', get_template_directory_uri() . '/style.css', '', $theme_version );
-}
-
-function theme_head_scripts()
-{
-	// code
-}
-
-function aloha_scripts()
+function theme_scripts()
 {
 	global $theme_version;
 
@@ -96,14 +85,33 @@ function aloha_scripts()
 		'subset'	=> 'vietnamese',
 	);
 
-	wp_enqueue_style( 'google-fonts', add_query_arg($query_agrs, '//fonts.googleapis.com/css') , array(), '' );
-	wp_enqueue_style( 'bootstrap-min', get_template_directory_uri() . '/css//bootstrap.min.css', '', $theme_version );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', '', $theme_version );
-	wp_enqueue_style( 'calendar', get_template_directory_uri() . '/css/calendar.css', '', $theme_version );
-	wp_enqueue_style( 'activity', get_template_directory_uri() . '/css/activity.css', '', $theme_version );
-	wp_enqueue_style( 'octicons-min', '//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css', array(), '' );
+	//wp_enqueue_style( 'google-fonts', add_query_arg($query_agrs, '//fonts.googleapis.com/css') , array(), '' );
+	wp_enqueue_style( 'bootstrap-min', 	get_template_directory_uri() . '/css//bootstrap.min.css', '', $theme_version );
+	wp_enqueue_style( 'font-awesome', 	get_template_directory_uri() . '/css/font-awesome.min.css', '', $theme_version );
+	wp_enqueue_style( 'calendar', 		get_template_directory_uri() . '/css/calendar.css', '', $theme_version );
+	wp_enqueue_style( 'activity', 		get_template_directory_uri() . '/css/activity.css', '', $theme_version );
+	wp_enqueue_style( 'octicons-min', 	'//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css', array(), '' );
+
+
+	//wp_enqueue_script( 'jquery-min', 	get_template_directory_uri() . '/js/jquery-1.12.3.min.js', 	'', '', true );
+	wp_enqueue_script( 'bootstrap-min', get_template_directory_uri() . '/js/bootstrap.min.js', 		null, null, true );
+	wp_enqueue_script( 'rss-min', 		get_template_directory_uri() . '/js/jquery.rss.min.js', 	'', null, true );
+
+	wp_enqueue_script( 'es6-promise', 	'//cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js', 	'', null, true );
+	wp_enqueue_script( 'fetch', 		'//cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js', 				'', null, true );
+	wp_enqueue_script( 'mustache', 		'//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js', 		'', null, true );
+
+	wp_enqueue_script( 'calendar', 		get_template_directory_uri() . '/js/calendar.min.js', 	'', null, true );
+	wp_enqueue_script( 'activity', 		get_template_directory_uri() . '/js/activity.js', 		'', null, true );
+	wp_enqueue_script( 'main', 			get_template_directory_uri() . '/js/main.js', 			'', null, true );
+
+}
+
+function aloha_scripts()
+{
+	global $theme_version;
+
+
+
 	wp_enqueue_style( 'aloha-style', get_template_directory_uri() . '/style.css', '', $theme_version );
-
-
-	// wp_enqueue_script( 'aloha-navigation', get_template_directory_uri() . '/js/navigation.min.js', array( 'jquery' ), '20160501', true );
 }
