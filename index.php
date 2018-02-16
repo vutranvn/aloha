@@ -6,6 +6,7 @@
  * @package Aloha
  * @since 1.0
  * @version 1.0
+ * @author Vu Tran
  */
 
 get_header(); ?>

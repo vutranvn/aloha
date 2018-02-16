@@ -5,8 +5,8 @@
  * @package Aloha
  * @since 1.0
  * @version 1.0
+ * @author Vu Tran
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
